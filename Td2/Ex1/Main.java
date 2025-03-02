@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         GrandParent gp = new GrandParent(2);
         Parent p = new Parent (3,5) ;
-        Child c = new Child(7,5 ,11); // we need a value for z as well and it should be from child not parent
+        Parent c = new Child(7 , 5 ,11); // we need a value for z as well
         gp.printMethod();
         p.printMethod();  // displays the gp method cause its inherited from it 
         c.printMethod();
