@@ -1,0 +1,10 @@
+P1 = P2: P1 (Person) = P2 (Person → DistinguishedAdult). Upcasting → Works.
+P4 = P1: P4 (Person → Baby) = P1 (Person → Person). Same type → Works.
+P3 = P4: P3 (Adult) = P4 (Person → Baby). Baby not an Adult → Compilation error.
+P3 = P1: P3 (Adult) = P1 (Person → Person). Person not an Adult → Compilation error.
+P4 = P5: P4 (Person) = P5 (Young → Teen). Teen is Person → Works.
+P7 = P6: P7 (Infant) = P6 (Child → Infant). Needs cast → Compilation error.
+P7 = (Infant) P4: P7 (Infant) = P4 (Person → Baby). Baby not Infant → Runtime error.
+P6 = (Baby) P4: P6 (Child) = P4 (Person → Baby). Baby is Child → Works.
+P3 = (DistinguishedAdult) P2: P3 (Adult) = P2 (Person → DistinguishedAdult). Valid cast → Works.
+P8 = (Baby) P5: P8 (Child) = P5 (Young → Teen). Teen not Baby → Runtime error.
