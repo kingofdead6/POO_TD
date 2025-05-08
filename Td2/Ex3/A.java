@@ -1,4 +1,4 @@
-package Ex3; // Define the package name
+package Ex3; 
 
 public class A {
     public void f(double x) {

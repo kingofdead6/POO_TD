@@ -16,6 +16,7 @@ public class Main {
         a.f(y);
 
         System.out.println("** B **");
+        
         B b = new B();
         b.f(bb);
         b.f(x);
@@ -59,7 +60,7 @@ public class Main {
         f.f(x);
         f.f(y);
         f.f(n, x);
-       // f.f(n, bb);
+    //    f.f(n, bb);
         System.out.println();
 
         a = f;
@@ -77,7 +78,7 @@ public class Main {
         System.out.println();
 
         c.f(n, bb);
-        //        ((F) d).f(n, bb);  Invalid cast removed
+            //    ((F) d).f(n, bb);
         ((C) f).f(n, bb);
         ((C) f).f(n);
         ((C) f).f(x);
